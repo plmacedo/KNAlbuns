@@ -7,8 +7,8 @@ from scipy.sparse import csr_matrix
 from sklearn.feature_extraction.text import TfidfTransformer
 
 # ================= CONFIGURAÇÃO DA API LAST.FM =================
-API_KEY = "68098236d385bdd70b2618c15c53f7cd"
-API_SECRET = "e9a7623ac218577c4bf5b315341109b6"
+API_KEY = "API_KEY"
+API_SECRET = "API_SECRET"
 
 try:
     network = pylast.LastFMNetwork(api_key=API_KEY, api_secret=API_SECRET)
@@ -19,7 +19,7 @@ except:
 # ================= 1. CARREGAR E PROCESSAR DADOS =================
 print("1. Lendo arquivo CSV...")
 try:
-    df_source = pd.read_csv('C:/Users/ric/Desktop/rik/code/Projeto IA/rym_clean1.csv')
+    df_source = pd.read_csv('rym_clean1.csv')
     df_unique = df_source.drop_duplicates(subset=['release_name']).copy()
     
     # Opcional: Limite para testes (remova para produção)

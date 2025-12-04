@@ -1,0 +1,9 @@
+customtkinter
+pandas
+joblib
+pylast
+scikit-learn
+scipy
+numpy
+requests
+Pillow
